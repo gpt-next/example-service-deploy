@@ -19,5 +19,5 @@ configMapGenerator:
 
 images:
 - name: nginx
-  newName: nginx #Should be the image in AWS ECR or whatever registry you want the cloud to pull from
-  newTag: 1.25.3 #Should be the tag that was built in CI
+  newName: public.ecr.aws/nginx/nginx #Should be the image in AWS ECR or whatever registry you want the cloud to pull from
+  newTag: stable-perl #Should be the tag that was built in CI
