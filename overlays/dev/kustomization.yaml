@@ -8,8 +8,6 @@ resources:
 replicas:
 - name: nginx
   count: 1
-- name: service-2
-  count: 2
 
 generatorOptions:
  disableNameSuffixHash: true
@@ -21,8 +19,5 @@ configMapGenerator:
 
 images:
 - name: nginx
-  newName: public.ecr.aws/nginx/nginx #Should be the image in AWS ECR or whatever registry you want the cloud to pull from
-  newTag: stable-perl #Should be the tag that was built in CI
-- name: service-2
   newName: public.ecr.aws/nginx/nginx #Should be the image in AWS ECR or whatever registry you want the cloud to pull from
   newTag: stable-perl #Should be the tag that was built in CI
